@@ -1,0 +1,11 @@
+extends ../../layouts/default.pug 
+block main 
+    h2(class="mb-4") Chi Tiết Tour Du Lịch
+
+    if (tour.title)
+        h3(class="mb-4") <b>#{tour.title}</b>
+
+    if (tour.stock)
+        div(class="mb-4") Số lượng: <b>#{tour.stock}</b>
+    if (tour.price_discount)
+        div(class="mb-4") <b>#{tour.price_discount} đ</b>
