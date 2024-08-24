@@ -205,6 +205,12 @@ if(formOrder) {
       .then(res => res.json())
       .then(data => {
         console.log(data);
+        if (data.code == 200){
+            localStorage.setItem("cart", JSON.stringify([]));
+            window.location.href = `/order/success?orderCode=${data.orderCode}`;
+        } else {
+            alert("Đặt hàng thất bại")
+        }
       })
   })
 }
